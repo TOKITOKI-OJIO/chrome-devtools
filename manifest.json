@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Log i18n",
+  "version": "1.0",
+  "description": "A simple browser extension template with React.",
+  "permissions": ["activeTab", "scripting", "webRequest", "webRequestBlocking"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
