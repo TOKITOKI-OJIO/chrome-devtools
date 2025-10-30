@@ -1,19 +1,18 @@
 {
-  "manifest_version": 3,
-  "name": "Log i18n",
+  "name": "Devtools - inspectedWindow API sample",
+  "description": "Uses devtools.inspectedWindow to collect and use data on the resouces used in a web page.",
   "version": "1.0",
-  "description": "A simple browser extension template with React.",
-  "permissions": ["activeTab", "scripting", "webRequest", "webRequestBlocking"],
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "查看 API 数据"
+  },
+  "permissions": ["storage"],
+
+  "host_permissions": ["https://*/*", "http://*/*"],
+
   "background": {
     "service_worker": "background.js"
   },
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
+  "devtools_page": "devtools.html"
 }
