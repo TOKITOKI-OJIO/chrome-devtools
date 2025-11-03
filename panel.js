@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "评论数",
       "收藏数",
       "转发数",
+      "链接",
     ];
 
     csvContent.push(headers.join(","));
@@ -163,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
           parseInt(item.comment_count) || 0,
           parseInt(item.collected_count) || 0,
           parseInt(item.shared_count) || 0,
+          item.link || '--',
         ];
         csvContent.push(row.join(","));
       });

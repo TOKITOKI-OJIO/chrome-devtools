@@ -70,6 +70,11 @@ chrome.devtools.network.onRequestFinished.addListener((request) => {
             const rt = {
               title: card?.display_title,
               usernamr: card?.user?.nickname,
+              link:
+                "https://www.xiaohongshu.com/explore/" +
+                item.id +
+                "?xsec_token=" +
+                item.xsec_token +'&xsec_source=',
               ...card?.interact_info,
             };
             return rt;
